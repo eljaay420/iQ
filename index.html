@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>infinite Quality</title>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Unbounded', sans-serif;
+      background: black;
+      color: white;
+      overflow-x: hidden;
+    }
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    header h1 {
+      font-size: 3rem;
+      color: crimson;
+    }
+    .echo-bg {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+    }
+    .echo-bg span {
+      position: absolute;
+      color: crimson;
+      font-size: 10rem;
+      opacity: 0.05;
+      animation: pulse 8s infinite ease-in-out;
+    }
+    .echo-bg span:nth-child(2) {
+      font-size: 15rem;
+      opacity: 0.03;
+    }
+    .echo-bg span:nth-child(3) {
+      font-size: 22rem;
+      opacity: 0.02;
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    .headshot {
+      display: flex;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+    .headshot img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 100px;
+      border: 3px solid crimson;
+    }
+    .album-row {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin: 2rem 1rem;
+      flex-wrap: wrap;
+    }
+    .album-row img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+    .album-row img:hover {
+      transform: scale(1.1);
+    }
+    .player {
+      text-align: center;
+      margin: 2rem;
+    }
+    .player audio {
+      width: 80%;
+      max-width: 600px;
+    }
+    footer {
+      background: #111;
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+    footer a {
+      color: crimson;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>infinite Quality</h1>
+  </header>
+
+  <div class="echo-bg">
+    <span>IQ</span>
+    <span>IQ</span>
+    <span>IQ</span>
+  </div>
+
+  <div class="headshot">
+    <img src="yes.jfif" alt="Artist Headshot">
+  </div>
+
+  <div class="album-row">
+    <img src="1.jfif" alt="Album 1">
+    <img src="2.jfif" alt="Album 2">
+    <img src="3.jfif" alt="Album 3">
+    <img src="5.jfif" alt="Album 4">
+  </div>
+
+  <div class="player">
+    <p><strong>Listen:</strong></p>
+    <audio controls>
+      <source src="" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+
+  <footer>
+    <p>Follow me: 
+      <a href="#">Instagram</a> | 
+      <a href="#">YouTube</a> | 
+      <a href="#">Spotify</a>
+    </p>
+    <p>Contact: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+    <p>&copy; 2025 Infinite Quality. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
